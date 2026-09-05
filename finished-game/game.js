@@ -13,7 +13,19 @@ const messageText = document.querySelector("#messageText");
 
 const W = canvas.width;
 const H = canvas.height;
-const GRAVITY = 0.72;
+
+// EASY SETTINGS: Change one number, save the file, and refresh the game.
+const EASY_SETTINGS = {
+  movementSpeed: 4.15,       // Try 3 for slower or 5 for faster.
+  normalJumpHeight: 13.7,    // Try 12 for lower or 15 for higher.
+  highJumpHeight: 17.2,      // Try 15 for lower or 19 for higher.
+  gravity: 0.72,             // Try 0.6 for floatier or 0.85 for heavier.
+  soundVolume: 1,            // Use 0.5 for quieter or 0 for silent.
+  applePowerSeconds: 5,      // How long Big Jubee lasts.
+  nextStageDelaySeconds: 2.2 // Wait before the next stage begins.
+};
+
+const GRAVITY = EASY_SETTINGS.gravity;
 const TOTAL_STAGES = 10;
 const keys = { left: false, right: false, jump: false };
 
@@ -239,7 +251,7 @@ function showResult(kind) {
     const completedStage = currentStage;
     autoAdvanceTimer = window.setTimeout(() => {
       if (state === "stageClear" && currentStage === completedStage) loadStage(completedStage + 1);
-    }, 2200);
+    }, EASY_SETTINGS.nextStageDelaySeconds * 1000);
   } else if (kind === "won") {
     state = "won";
     messageEyebrow.textContent = "ALL 10 STAGES COMPLETE";
@@ -301,7 +313,7 @@ function ensureAudio() {
 }
 
 function playTone(frequency, duration, type = "sine", volume = 0.05, delay = 0) {
-  if (!soundOn) return;
+  if (!soundOn || EASY_SETTINGS.soundVolume <= 0) return;
   try {
     const audio = ensureAudio();
     if (!audio) return;
@@ -311,7 +323,7 @@ function playTone(frequency, duration, type = "sine", volume = 0.05, delay = 0) 
     oscillator.type = type;
     oscillator.frequency.value = frequency;
     gain.gain.setValueAtTime(0.001, startsAt);
-    gain.gain.exponentialRampToValueAtTime(volume, startsAt + 0.012);
+    gain.gain.exponentialRampToValueAtTime(volume * EASY_SETTINGS.soundVolume, startsAt + 0.012);
     gain.gain.exponentialRampToValueAtTime(0.001, startsAt + duration);
     oscillator.connect(gain).connect(audio.destination);
     oscillator.start(startsAt);
@@ -320,7 +332,7 @@ function playTone(frequency, duration, type = "sine", volume = 0.05, delay = 0) 
 }
 
 function playSweep(startFrequency, endFrequency, duration, type = "sine", volume = 0.05, delay = 0) {
-  if (!soundOn) return;
+  if (!soundOn || EASY_SETTINGS.soundVolume <= 0) return;
   try {
     const audio = ensureAudio();
     if (!audio) return;
@@ -331,7 +343,7 @@ function playSweep(startFrequency, endFrequency, duration, type = "sine", volume
     oscillator.frequency.setValueAtTime(startFrequency, startsAt);
     oscillator.frequency.exponentialRampToValueAtTime(Math.max(20, endFrequency), startsAt + duration);
     gain.gain.setValueAtTime(0.001, startsAt);
-    gain.gain.exponentialRampToValueAtTime(volume, startsAt + 0.01);
+    gain.gain.exponentialRampToValueAtTime(volume * EASY_SETTINGS.soundVolume, startsAt + 0.01);
     gain.gain.exponentialRampToValueAtTime(0.001, startsAt + duration);
     oscillator.connect(gain).connect(audio.destination);
     oscillator.start(startsAt);
@@ -340,7 +352,7 @@ function playSweep(startFrequency, endFrequency, duration, type = "sine", volume
 }
 
 function playNoise(duration = 0.08, volume = 0.02, filterFrequency = 1200, delay = 0) {
-  if (!soundOn) return;
+  if (!soundOn || EASY_SETTINGS.soundVolume <= 0) return;
   try {
     const audio = ensureAudio();
     if (!audio) return;
@@ -355,7 +367,7 @@ function playNoise(duration = 0.08, volume = 0.02, filterFrequency = 1200, delay
     source.buffer = buffer;
     filter.type = "bandpass";
     filter.frequency.value = filterFrequency;
-    gain.gain.setValueAtTime(volume, startsAt);
+    gain.gain.setValueAtTime(volume * EASY_SETTINGS.soundVolume, startsAt);
     gain.gain.exponentialRampToValueAtTime(0.001, startsAt + duration);
     source.connect(filter).connect(gain).connect(audio.destination);
     source.start(startsAt);
@@ -462,7 +474,7 @@ function intersects(a, b) {
 
 function triggerHighJump() {
   if (state === "playing" && !player.grounded && player.vy < 0 && !player.highJumpUsed) {
-    player.vy = -17.2;
+    player.vy = -EASY_SETTINGS.highJumpHeight;
     player.highJumpUsed = true;
     playSfx("highJump");
   }
@@ -477,16 +489,16 @@ function update(dt) {
   const moveDirection = (keys.right ? 1 : 0) - (keys.left ? 1 : 0);
   if (moveDirection !== 0) {
     player.facing = moveDirection;
-    const desiredSpeed = moveDirection * 4.15;
+    const desiredSpeed = moveDirection * EASY_SETTINGS.movementSpeed;
     const response = player.grounded ? 0.13 : 0.065;
     player.vx += (desiredSpeed - player.vx) * response * step;
   } else {
     player.vx *= Math.pow(player.grounded ? 0.8 : 0.95, step);
   }
-  player.vx = Math.max(-4.15, Math.min(4.15, player.vx));
+  player.vx = Math.max(-EASY_SETTINGS.movementSpeed, Math.min(EASY_SETTINGS.movementSpeed, player.vx));
 
   if (keys.jump && player.grounded) {
-    player.vy = -13.7;
+    player.vy = -EASY_SETTINGS.normalJumpHeight;
     player.grounded = false;
     player.landingTimer = 0;
     playSfx("jump");
@@ -540,7 +552,7 @@ function update(dt) {
     if (!apple.eaten && intersects(player, { x: apple.x - 24, y: apple.y - 24, w: 48, h: 48 })) {
       apple.eaten = true;
       player.big = true;
-      player.bigTimer = 5000;
+      player.bigTimer = EASY_SETTINGS.applePowerSeconds * 1000;
       player.growthPulse = 28;
       score += 300;
       playSfx("apple");
