@@ -56,9 +56,10 @@ function updateProgress() {
     'Your adventure starts here!',
     'Jubee is on the move!',
     'You are building a real game!',
-    'More than halfway there!',
-    'One more version to go!',
-    'You made Jubee World!'
+    'You reached the halfway mark!',
+    'Jubee World is coming alive!',
+    'One phone-ready version to go!',
+    'You made Jubee World for computers and phones!'
   ];
   progressCount.textContent = `${finished} of ${boxes.length} versions finished`;
   progressCheer.textContent = cheers[finished];

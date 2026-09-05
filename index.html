@@ -3,12 +3,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="description" content="Build Jubee World from scratch in five friendly versions with help from AI.">
+  <meta name="description" content="Build Jubee World from scratch in six friendly versions with help from AI.">
   <title>Make Jubee World</title>
   <link rel="stylesheet" href="site.css">
 </head>
 <body>
-  <a class="skip-link" href="#versions">Skip to the five versions</a>
+  <a class="skip-link" href="#versions">Skip to the six versions</a>
 
   <header class="hero">
     <nav class="topbar" aria-label="Main navigation">
@@ -25,7 +25,7 @@
       <div>
         <p class="eyebrow">A make-it-yourself game adventure</p>
         <h1>Build Jubee World<br>with help from AI</h1>
-        <p class="hero-copy">Begin with three empty files. Make one working version at a time. By Version 5, Jubee will run, jump, collect bones, defeat enemies, and travel through ten levels.</p>
+        <p class="hero-copy">Begin with one empty folder named jubee-world. For each lesson, Copilot creates a new complete folder—from version-1 through version-6—so every working version stays safe.</p>
         <div class="hero-actions">
           <a class="button primary" href="#start">Start making the game</a>
           <a class="button secondary" href="finished-game/index.html">Play the finished example</a>
@@ -65,35 +65,32 @@
         <li><strong>Install Visual Studio Code.</strong><span>Use the blue download card above and follow the directions for your computer.</span></li>
         <li><strong>Open Copilot.</strong><span>In Visual Studio Code, select the Copilot picture near the top-right corner.</span></li>
         <li><strong>Choose Copilot Free.</strong><span>Select <em>Sign up for Copilot Free</em> and sign in with a GitHub account. An adult should help with the account.</span></li>
-        <li><strong>Open your game folder.</strong><span>Select <em>File → Open Folder</em>, choose <code>jubee-world</code>, and open Copilot Chat.</span></li>
+        <li><strong>Open the empty project.</strong><span>Create an empty folder named <code>jubee-world</code>. Select <em>File → Open Folder</em>, choose it, open Copilot Chat, and choose <em>Agent</em> at the bottom of the chat.</span></li>
       </ol>
       <aside class="tip"><strong>Copilot Free has a monthly limit.</strong> It is enough to begin this project, but ask for one version at a time and keep every working version so you do not waste requests.</aside>
     </section>
 
     <section class="section intro" id="folder">
       <div class="section-heading">
-        <p class="eyebrow">Step 2: Make the starting files</p>
-        <h2>Make a new folder in Visual Studio Code</h2>
-        <p>Create a folder named <code>jubee-world</code>. Open it in Visual Studio Code, then create these three empty files in the left sidebar.</p>
+        <p class="eyebrow">Step 2: Begin with nothing</p>
+        <h2>Let Copilot make every folder and file</h2>
+        <p>Open the empty <code>jubee-world</code> folder in Visual Studio Code. Do not make a version folder or provide any files. The first prompt tells Copilot to create <code>version-1</code> and everything inside it.</p>
       </div>
 
       <div class="setup-grid">
         <div class="folder-card">
-          <h3>Your starting folder</h3>
-          <pre aria-label="Starting folder and files">jubee-world/
-  index.html
-  styles.css
-  game.js</pre>
+          <h3>Your project before Version 1</h3>
+          <pre aria-label="Empty starting folder">jubee-world/  ← empty</pre>
         </div>
         <div class="file-jobs">
-          <div><span>1</span><p><strong>index.html</strong> holds the words, buttons, and game area.</p></div>
-          <div><span>2</span><p><strong>styles.css</strong> controls colors, spacing, and appearance.</p></div>
-          <div><span>3</span><p><strong>game.js</strong> controls movement, scores, enemies, and levels.</p></div>
+          <div><span>1</span><p><strong>Open Agent mode.</strong> This lets Copilot create and change files in the open folder.</p></div>
+          <div><span>2</span><p><strong>Give one request.</strong> The Version 1 prompt tells Copilot to create the folder and all its files.</p></div>
+          <div><span>3</span><p><strong>Review the work.</strong> Allow the suggested file changes, then try the new game.</p></div>
         </div>
       </div>
 
       <aside class="tip">
-        <strong>Save every working version.</strong> Copy the whole folder after each version and name it <code>jubee-world-version-1</code>, then 2, 3, 4, and 5. If something breaks, return to the last version that worked.
+        <strong>Copilot preserves every working version.</strong> Each new prompt tells Copilot to copy the previous folder, give the copy a new name, and change only the new copy. Students should check the folder names before allowing the changes.
       </aside>
     </section>
 
@@ -104,8 +101,8 @@
         <p>Tell AI what you are making, what you want to change, which files you are sharing, and what should happen when it works. Short, clear sentences are best.</p>
       </div>
       <ol class="work-cycle">
-        <li><span>Ask</span>Copy the prompt and share your current files.</li>
-        <li><span>Build</span>Put the returned code in the correctly named file.</li>
+        <li><span>Ask</span>Open the parent project folder and give Copilot one version prompt.</li>
+        <li><span>Build</span>Review the files Copilot creates or changes in the open folder.</li>
         <li><span>Try</span>Open or refresh the game and test the new change.</li>
         <li><span>Save</span>Keep a new version only after everything works.</li>
       </ol>
@@ -113,15 +110,15 @@
 
     <section class="section versions" id="versions">
       <div class="section-heading">
-        <p class="eyebrow">Your five-version journey</p>
+        <p class="eyebrow">Your six-version journey</p>
         <h2>Build one useful part at a time</h2>
         <p>Open each version, copy its prompt, and share the files requested. Check the “Finished” box when your version passes every test.</p>
       </div>
 
       <div class="adventure-progress" aria-label="Learning progress">
-        <div class="progress-copy"><span id="progress-count">0 of 5 versions finished</span><strong id="progress-cheer">Your adventure starts here!</strong></div>
+        <div class="progress-copy"><span id="progress-count">0 of 6 versions finished</span><strong id="progress-cheer">Your adventure starts here!</strong></div>
         <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
-        <div class="progress-paws" aria-hidden="true"><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🏠</span></div>
+        <div class="progress-paws" aria-hidden="true"><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🏠</span><span>📱</span></div>
       </div>
 
       <article class="version-card version-one" id="version-1">
@@ -132,12 +129,13 @@
             <img class="version-picture" src="site-assets/jubee-standing.png" alt="Jubee standing">
             <label class="done"><input type="checkbox" data-version="1"> Finished</label>
           </div>
-          <ul class="changes"><li>Cheerful game page</li><li>Start button</li><li>Temporary Jubee</li><li>Left and right movement</li></ul>
+          <div class="folder-action"><span aria-hidden="true">📂</span><p><strong>Start with an empty jubee-world folder</strong>Choose <em>Agent</em> in Copilot Chat and give it the prompt below. Copilot creates <code>version-1</code> and all three game files.</p></div>
+          <ul class="changes"><li>Three files made by Copilot</li><li>Cheerful game page</li><li>Start button</li><li>Left and right movement</li></ul>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>I want to make a browser game called Jubee World. Let's start with creating three empty files named index.html, styles.css, and game.js. Please make a cheerful page with the game title, a large game area, simple instructions, and a Start Game button. Draw Jubee as a caramel-colored shape with a cream-colored face. Let me move Jubee left and right with the arrow keys or the A and D keys. Jubee should stop when I release a key and should stay inside the game area. Give me the complete code for all three files and clearly label each file.</blockquote>
+            <blockquote>I opened an empty folder named jubee-world in Visual Studio Code. Please create the first version of a browser game called Jubee World. Create a folder named version-1 inside the open jubee-world folder. Inside version-1, create index.html, styles.css, and game.js, and connect them so the game works when I open version-1/index.html. Make a cheerful page with the game title, a large game area, simple instructions, and a Start Game button. Draw Jubee as a caramel-colored shape with a cream-colored face. Let me move Jubee left and right with the arrow keys or the A and D keys. Jubee should stop when I release a key and stay inside the game area. Please create and fill every file directly. Do not ask me to create a folder, provide files, or paste code. When you finish, tell me how to open and test the game.</blockquote>
           </div>
-          <details><summary>What should I test?</summary><ul><li>Open index.html and select Start Game.</li><li>Hold and release each movement key.</li><li>Make sure Jubee stays inside the game area.</li></ul></details>
+          <details><summary>What should I test?</summary><ul><li>Check that Copilot created <code>version-1</code>.</li><li>Check that version-1 contains index.html, styles.css, and game.js.</li><li>Open version-1/index.html and select Start Game.</li><li>Hold and release each movement key.</li><li>Make sure Jubee stays inside the game area.</li></ul></details>
         </div>
       </article>
 
@@ -149,10 +147,11 @@
             <img class="version-picture" src="site-assets/jubee-jumping.png" alt="Jubee jumping">
             <label class="done"><input type="checkbox" data-version="2"> Finished</label>
           </div>
+          <div class="folder-action"><span aria-hidden="true">📁</span><p><strong>Ask Copilot to create version-2</strong>Copilot copies everything from <code>version-1</code> into <code>version-2</code>, then changes only version-2.</p></div>
           <ul class="changes"><li>Normal and high jumps</li><li>Platforms and gaps</li><li>A wider world</li><li>Finish gate</li></ul>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>Please improve my current Jubee World game. Add ground, raised platforms, and a few gaps. Jubee should jump with Space, W, or Up Arrow. If I press Up Arrow twice quickly, Jubee should jump higher. Jubee should land on platforms and should not jump again while already in the air. Make the world wider than the screen so the view follows Jubee as she moves. Put a wooden finish gate at the end. The level should finish only when Jubee touches the gate. Keep the movement from Version 1 calm and smooth. Give me the complete updated files that need to change.</blockquote>
+            <blockquote>My open jubee-world folder contains a working folder named version-1. Create a new folder named version-2 by copying every file and folder from version-1. Make all new changes only inside version-2 and do not change version-1. Add ground, raised platforms, and a few gaps. Jubee should jump with Space, W, or Up Arrow. If I press Up Arrow twice quickly, Jubee should jump higher. Jubee should land on platforms and should not jump again while already in the air. Make the world wider than the screen so the view follows Jubee as she moves. Put a wooden finish gate at the end. The level should finish only when Jubee touches the gate. Keep the movement calm and smooth. Create or update all needed files directly inside version-2. When you finish, tell me how to test the new version.</blockquote>
           </div>
           <details><summary>What should I test?</summary><ul><li>Try every jump key and the double Up Arrow jump.</li><li>Land on every platform and cross every gap.</li><li>Make sure the level ends only when Jubee touches the gate.</li></ul></details>
         </div>
@@ -166,10 +165,11 @@
             <div class="version-picture-group" aria-label="A golden bone and an apple"><img src="site-assets/golden-bone.png" alt="Golden bone"><img src="site-assets/apple.png" alt="Apple"></div>
             <label class="done"><input type="checkbox" data-version="3"> Finished</label>
           </div>
+          <div class="folder-action"><span aria-hidden="true">📁</span><p><strong>Ask Copilot to create version-3</strong>Copilot copies the working <code>version-2</code> folder and adds the new challenges only to version-3.</p></div>
           <ul class="changes"><li>Golden bones and points</li><li>Five-second apple power</li><li>Three enemy types</li><li>Hearts and restart</li></ul>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>Please add fun challenges to my current Jubee World game. Place golden bones around the level and add points when Jubee collects them. Add an apple that makes Jubee larger for exactly five seconds, then returns her to normal size. Add squirrels, raccoons, and make-believe poison-ivy creatures. Jubee should defeat an enemy when she lands on it while falling. Touching an enemy from the side should take away one heart. Give Jubee three hearts and add a Restart button. Keep the jumps and finish gate working. Give me the complete updated files that need to change.</blockquote>
+            <blockquote>My open jubee-world folder contains a working folder named version-2. Create a new folder named version-3 by copying everything from version-2. Make all new changes only inside version-3 and do not change version-1 or version-2. Place golden bones around the level and add points when Jubee collects them. Add an apple that makes Jubee larger for exactly five seconds, then returns her to normal size. Add squirrels, raccoons, and make-believe poison-ivy creatures. Jubee should defeat an enemy when she lands on it while falling. Touching an enemy from the side should take away one heart. Give Jubee three hearts and add a Restart button. Keep the jumps and finish gate working. Create or update all needed files directly inside version-3. When you finish, tell me how to test the new version.</blockquote>
           </div>
           <details><summary>What should I test?</summary><ul><li>Collect bones and watch the score.</li><li>Eat the apple and count five seconds.</li><li>Defeat every enemy from above and test side contact.</li><li>Lose all hearts, restart, and reach the gate.</li></ul></details>
         </div>
@@ -183,11 +183,12 @@
             <img class="version-picture" src="site-assets/raccoon.png" alt="Raccoon game character">
             <label class="done"><input type="checkbox" data-version="4"> Finished</label>
           </div>
+          <div class="folder-action"><span aria-hidden="true">📁</span><p><strong>Ask Copilot to create version-4</strong>Copilot copies <code>version-3</code>, downloads the supplied game assets into <code>version-4/assets</code>, and changes only version-4.</p></div>
           <ul class="changes"><li>Character and item pictures</li><li>Calm animation</li><li>Ten harder levels</li><li>Final celebration</li></ul>
-          <div class="asset-note"><strong>Before asking:</strong> Put your pictures in an <code>assets</code> folder. Make smaller folders named <code>jubee</code>, <code>squirrel</code>, <code>raccoon</code>, <code>ivy</code>, <code>bone</code>, <code>apple</code>, and <code>backgrounds</code>.</div>
+          <div class="asset-note"><strong>Use the supplied game artwork:</strong> <a href="https://github.com/wittyandy/jubeeworld/tree/main/finished-game/assets" target="_blank" rel="noopener">view the Jubee World assets folder</a> or <a href="https://github.com/wittyandy/jubeeworld/archive/refs/heads/main.zip">download the whole repository ZIP</a>. Ask Copilot to place the complete folder at <code>version-4/assets</code>. If Copilot cannot download it, unzip the repository and copy <code>finished-game/assets</code> into version-4 yourself.</div>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>Please use my pictures in Jubee World (https://github.com/wittyandy/jubeeworld/tree/main/finished-game). Replace the temporary shapes with the Jubee, squirrel, raccoon, poison-ivy, bone, and apple pictures I attached. Show the pictures in order so the actions look smooth. Use only two calm walking pictures for moving left and right, and do not make Jubee bounce up and down while running. Keep her size easy to see. Add ten levels. Each new level can be a little longer and can have more platforms, bones, and enemies, but every jump must still be possible. After Jubee touches the gate, show a Next Level button. After Level 10, show a celebration screen. Give me the complete updated files that need to change, and list the picture folders and names the game expects.</blockquote>
+            <blockquote>My open jubee-world folder contains a working folder named version-3. Create a new folder named version-4 by copying everything from version-3. Make all new changes only inside version-4 and do not change the earlier folders. Download the complete game-assets folder from https://github.com/wittyandy/jubeeworld/tree/main/finished-game/assets and save it as version-4/assets. Keep every folder name and file name unchanged. If you cannot download the folder directly, create version-4 first and tell me to copy finished-game/assets into version-4/assets before you continue. Use the supplied Jubee, squirrel, raccoon, ivy, bone, apple, and background pictures in the game. Use only two calm walking pictures for moving left and right, and do not make Jubee bounce up and down while running. Add ten levels that slowly become harder, but make every jump possible. After Jubee touches the gate, show a Next Level button. After Level 10, show a celebration screen. Create or update all needed files directly inside version-4. When you finish, list the asset folders the game uses and tell me how to test the new version.</blockquote>
           </div>
           <details><summary>What should I test?</summary><ul><li>Watch Jubee stand, run, jump, and land.</li><li>Make sure running is calm and every picture appears.</li><li>Test the changes between several levels.</li><li>Finish Level 10 and check the celebration.</li></ul></details>
         </div>
@@ -197,16 +198,46 @@
         <div class="version-side"><span>Version</span><strong>5</strong></div>
         <div class="version-main">
           <div class="version-title">
-            <div><p class="tag">Finish and share</p><h3>Add scenery, music, sounds, and final polish</h3></div>
+            <div><p class="tag">Polish the world</p><h3>Add scenery, music, and action sounds</h3></div>
             <img class="version-picture" src="site-assets/jubee-celebrating.png" alt="Jubee celebrating">
             <label class="done"><input type="checkbox" data-version="5"> Finished</label>
           </div>
-          <ul class="changes"><li>Continuous scenery</li><li>Music and action sounds</li><li>Phone and tablet buttons</li><li>Final testing</li></ul>
+          <div class="folder-action"><span aria-hidden="true">📁</span><p><strong>Ask Copilot to create version-5</strong>Copilot copies everything—including the pictures—from <code>version-4</code> and adds scenery and sound only to version-5.</p></div>
+          <ul class="changes"><li>Continuous scenery</li><li>Music and action sounds</li><li>Sound on or off</li><li>Ten-level game test</li></ul>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>Please finish and polish my current Jubee World game. Add wide background pictures that move gently with the world and do not show obvious repeated edges. Use sunny, autumn, and nighttime scenery in different levels. Add cheerful background music and clear sounds for a normal jump, high jump, collecting a bone, eating an apple, growing larger, returning to normal size, defeating an enemy, getting hurt, and finishing a level. Add a Sound On or Off button. Add simple screen buttons so the game can be played on a phone or tablet. Keep all ten levels, calm movement, the five-second apple power, and the finish gate working. Give me the complete updated files that need to change.</blockquote>
+            <blockquote>My open jubee-world folder contains a working folder named version-4. Create a new folder named version-5 by copying every file and folder from version-4. Make all new changes only inside version-5 and do not change the earlier folders. Use the supplied meadow, autumn, and moonlit background pictures so the scenery moves gently and does not show obvious repeated edges. Create cheerful background music and clear sounds in the browser for a normal jump, high jump, collecting a bone, eating an apple, growing larger, returning to normal size, defeating an enemy, getting hurt, and finishing a level. Do not ask me to provide sound files. Add a Sound On or Off button. Keep all ten levels, calm movement, the five-second apple power, and the finish gate working. Create or update all needed files directly inside version-5. When you finish, tell me how to test the new version.</blockquote>
           </div>
-          <details><summary>What should I test?</summary><ul><li>Play all ten levels.</li><li>Check movement, jumps, platforms, items, enemies, hearts, gates, and sounds.</li><li>Turn sound off and on.</li><li>Try the game at different window sizes.</li></ul></details>
+          <details><summary>What should I test?</summary><ul><li>Play all ten levels on a computer.</li><li>Check movement, jumps, platforms, items, enemies, hearts, gates, and sounds.</li><li>Turn sound off and on.</li><li>Make sure the music does not cover the action sounds.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="version-card version-six" id="version-6">
+        <div class="version-side"><span>Version</span><strong>6</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">Play anywhere</p><h3>Make the game ready for smartphones</h3></div>
+            <img class="version-picture phone-picture" src="site-assets/jubee-jumping.png" alt="Jubee jumping on a smartphone-ready game">
+            <label class="done"><input type="checkbox" data-version="6"> Finished</label>
+          </div>
+          <div class="folder-action"><span aria-hidden="true">📱</span><p><strong>Ask Copilot to create version-6</strong>Copilot copies all of <code>version-5</code> and makes the phone changes only inside version-6.</p></div>
+          <ul class="changes"><li>Fits small screens</li><li>Large touch buttons</li><li>Two-button play</li><li>Real-phone testing</li></ul>
+          <div class="phone-tasks">
+            <strong>What makes it smartphone-ready?</strong>
+            <ol>
+              <li>The game fits both upright and sideways phone screens without cutting off important parts.</li>
+              <li>Large Left, Right, and Jump buttons sit near the bottom corners and do not cover Jubee.</li>
+              <li>A player can hold Left or Right while tapping Jump with another finger.</li>
+              <li>Tapping the game buttons does not move the webpage, highlight words, or make the screen larger.</li>
+              <li>Music begins after the player taps Start, and all menus can be used by touch.</li>
+              <li>The GitHub Pages link is tested on at least one real phone.</li>
+            </ol>
+          </div>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>My open jubee-world folder contains a working folder named version-5. Create a new folder named version-6 by copying every file and folder from version-5. Make all new changes only inside version-6 and do not change the earlier folders. Make version-6 work well on smartphones while keeping the computer controls. Make the whole game fit upright and sideways phone screens without cutting off the game or showing a sideways scroll bar. Add large Left and Right buttons near the lower-left corner and a large Jump button near the lower-right corner. I need to be able to hold a direction with one finger and jump with another. Tapping the game buttons should not move the webpage, select words, or make the screen larger. Double-tapping Jump should still make Jubee jump higher. Start the music only after I tap Start so phone browsers allow it. Make every menu button easy to tap. Keep all ten levels, supplied pictures, sounds, scores, enemies, apple power, and gate actions working. Create or update all needed files directly inside version-6. When you finish, tell me how to test it on a computer and a phone.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Check that Copilot created <code>version-6</code> without changing version-5.</li><li>Make the browser window narrow and try the game upright and sideways.</li><li>Hold Left or Right while tapping Jump with a second finger.</li><li>Double-tap Jump and check the high jump.</li><li>Touch every Start, Sound, Next Level, and Restart button.</li><li>Make sure the page stays still while using the game buttons.</li><li>Publish version-6 and play its GitHub Pages link on a real phone.</li></ul></details>
         </div>
       </article>
     </section>
@@ -215,7 +246,7 @@
       <div class="section-heading">
         <p class="eyebrow">Make it your own</p>
         <h2>Change a number. Change the game.</h2>
-        <p>After the finished game works, open <code>finished-game/game.js</code>. The easy settings are together near the top. Change only one value, save the file, refresh the browser, and try it.</p>
+        <p>After the phone-ready game works, open <code>version-6/game.js</code>. The easy settings should be together near the top. Change only one value, save the file, refresh the browser, and try it. The included finished example uses the same settings.</p>
       </div>
       <div class="settings-demo">
         <div class="code-window">

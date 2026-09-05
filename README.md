@@ -1,6 +1,8 @@
 # Jubee World Learning Site
 
-This folder is ready to publish with GitHub Pages. The homepage teaches children how to create Jubee World from three empty files in five working versions. It also includes the finished ten-level game as a playable example.
+This folder is ready to publish with GitHub Pages. The homepage teaches children how to create Jubee World from an empty parent folder named `jubee-world`. In Copilot Agent mode, each prompt creates the next complete folder: `version-1`, `version-2`, `version-3`, `version-4`, `version-5`, and `version-6`. Copilot copies the previous working version before making new changes, so earlier versions remain safe. Students download the provided game artwork for Version 4 from the project’s GitHub assets folder; no starter code or sound files are required.
+
+Game assets: https://github.com/wittyandy/jubeeworld/tree/main/finished-game/assets
 
 The homepage now begins with links and directions for installing Visual Studio Code and turning on GitHub Copilot Free. The finished example places its most useful values in an `EASY_SETTINGS` section near the top of `finished-game/game.js`, where children can safely experiment with movement speed, jump height, gravity, sound volume, apple-power time, and the wait between stages.
 
@@ -24,7 +26,7 @@ The address will usually be:
 
 ## Files
 
-- `index.html` — the complete five-version learning homepage
+- `index.html` — the complete six-version learning homepage
 - `site.css` — homepage appearance
 - `site.js` — copy buttons and saved progress boxes
 - `site-assets/` — local homepage pictures; no outside image service is used
