@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#8ed8f8">
+  <title>Jubee World</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="title-row">
+      <div>
+        <p class="eyebrow">JUBEE'S BROWSER ADVENTURE</p>
+        <h1>Jubee World</h1>
+      </div>
+      <button id="soundButton" class="icon-button" type="button" aria-label="Turn sound off">Sound: On</button>
+    </header>
+
+    <section class="game-frame" aria-label="Jubee World game">
+      <canvas id="game" width="960" height="540" tabindex="0" aria-label="Ten-stage side-scrolling platform game. Use arrow keys to move and Space to jump."></canvas>
+
+      <div id="startPanel" class="overlay">
+        <div class="panel">
+          <div class="jubee-badge" aria-hidden="true">🐶</div>
+          <p class="eyebrow">A 10-STAGE PLATFORM ADVENTURE</p>
+          <h2>Help Jubee get home!</h2>
+          <p>Collect golden bones and apples while traveling through meadows, autumn woods, and a moonlit garden. Stomp or avoid squirrels, raccoons, and poison-ivy monsters.</p>
+          <div class="key-guide">
+            <span><kbd>←</kbd><kbd>→</kbd> Move</span>
+            <span><kbd>Space</kbd> Jump</span>
+            <span><kbd>↑</kbd><kbd>↑</kbd> High jump</span>
+            <span>Land from above to stomp</span>
+          </div>
+          <button id="startButton" class="primary-button" type="button">Start Game</button>
+        </div>
+      </div>
+
+      <div id="messagePanel" class="overlay hidden" aria-live="polite">
+        <div class="panel">
+          <p id="messageEyebrow" class="eyebrow">TRY AGAIN</p>
+          <h2 id="messageTitle">Almost there!</h2>
+          <p id="messageText">Jubee can do it.</p>
+          <button id="restartButton" class="primary-button" type="button">Play Again</button>
+        </div>
+      </div>
+
+      <div class="touch-controls" aria-label="Touch controls">
+        <div class="touch-pair">
+          <button id="leftButton" type="button" aria-label="Move left">◀</button>
+          <button id="rightButton" type="button" aria-label="Move right">▶</button>
+        </div>
+        <button id="jumpButton" class="jump-button" type="button" aria-label="Jump">JUMP</button>
+      </div>
+    </section>
+
+    <p class="tip"><strong>Goal:</strong> touch the finish gate beside Jubee's doghouse to complete each stage. Bones earn points, and an apple makes Jubee bigger for five seconds. Double-tap <strong>Up</strong> or the touch <strong>Jump</strong> button for a high jump.</p>
+  </main>
+
+  <script src="game.js"></script>
+</body>
+</html>
