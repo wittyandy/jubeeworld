@@ -189,9 +189,6 @@ summary { padding-top: 1rem; color: var(--green); font-weight: 900; cursor: poin
 .publish-steps { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; padding: 0; list-style: none; counter-reset: steps; }
 .publish-steps li { position: relative; min-height: 145px; padding: 1.4rem 1.4rem 1.4rem 4.5rem; background: white; border: 1px solid var(--line); border-radius: 18px; counter-increment: steps; }
 .publish-steps li::before { content: counter(steps); position: absolute; left: 1.2rem; top: 1.25rem; display: grid; width: 42px; aspect-ratio: 1; place-items: center; color: white; background: var(--green); border-radius: 50%; font-weight: 900; }
-.browser-note { display: grid; grid-template-columns: 54px 1fr; align-items: center; gap: 1rem; margin-top: 1.25rem; padding: 1rem 1.2rem; background: #e4f8fc; border: 2px solid #b7e7ed; border-radius: 18px; }
-.browser-note > span { display: grid; width: 50px; aspect-ratio: 1; place-items: center; background: white; border-radius: 50%; font-size: 1.5rem; }
-.browser-note p { margin: .15rem 0 0; }
 .finish-panel { position: relative; display: grid; grid-template-columns: 230px 1fr; align-items: center; gap: 2.2rem; margin-top: 3rem; padding: 2rem; overflow: hidden; color: white; background: linear-gradient(135deg, #7055bf, #a879d0 58%, #dc7aa7); border: 4px solid white; border-radius: 28px; box-shadow: var(--shadow-pop); }
 .finish-panel::after { content: "★  ✦  ★"; position: absolute; right: 3%; top: 1rem; color: #ffe486; font-size: 1.5rem; letter-spacing: .45rem; }
 .finish-panel img { width: 100%; max-height: 220px; object-fit: contain; filter: drop-shadow(0 12px 8px rgba(0,0,0,.2)); }

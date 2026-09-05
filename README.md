@@ -4,6 +4,8 @@ This folder is ready to publish with GitHub Pages. The homepage teaches children
 
 Game assets: https://github.com/wittyandy/jubeeworld/tree/main/finished-game/assets
 
+The included finished game places its smartphone movement and Jump controls in a separate panel below the game screen, rather than over the game.
+
 The homepage now begins with links and directions for installing Visual Studio Code and turning on GitHub Copilot Free. The finished example places its most useful values in an `EASY_SETTINGS` section near the top of `finished-game/game.js`, where children can safely experiment with movement speed, jump height, gravity, sound volume, apple-power time, and the wait between stages.
 
 ## Preview on your computer
@@ -13,7 +15,7 @@ Double-click `index.html`. Select **Play the finished example** to open the incl
 ## Publish with GitHub Pages
 
 1. Sign in at [github.com](https://github.com/).
-2. Create a new public repository named `jubee-world-learning`.
+2. Create a new public repository named `jubeeworld`.
 3. Upload everything inside this folder. Keep `index.html` at the top level and keep the `finished-game` folder together.
 4. Open **Settings → Pages**.
 5. Choose **Deploy from a branch**.
@@ -22,7 +24,7 @@ Double-click `index.html`. Select **Play the finished example** to open the incl
 
 The address will usually be:
 
-    https://YOUR-USERNAME.github.io/jubee-world-learning/
+    https://YOUR-USERNAME.github.io/jubeeworld/
 
 ## Files
 
@@ -31,5 +33,3 @@ The address will usually be:
 - `site.js` — copy buttons and saved progress boxes
 - `site-assets/` — local homepage pictures; no outside image service is used
 - `finished-game/` — the complete playable Jubee World example
-
-The finished game uses an HTML `<canvas>` element as its drawing screen. This is a standard part of a web browser and is unrelated to Canvas LMS. The website does not connect to Canvas LMS or load files from it.

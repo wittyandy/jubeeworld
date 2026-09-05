@@ -226,7 +226,7 @@
             <strong>What makes it smartphone-ready?</strong>
             <ol>
               <li>The game fits both upright and sideways phone screens without cutting off important parts.</li>
-              <li>Large Left, Right, and Jump buttons sit near the bottom corners and do not cover Jubee.</li>
+              <li>Large Left, Right, and Jump buttons sit in a separate control panel below the game screen, so they never cover Jubee.</li>
               <li>A player can hold Left or Right while tapping Jump with another finger.</li>
               <li>Tapping the game buttons does not move the webpage, highlight words, or make the screen larger.</li>
               <li>Music begins after the player taps Start, and all menus can be used by touch.</li>
@@ -235,9 +235,9 @@
           </div>
           <div class="prompt-box">
             <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
-            <blockquote>My open jubee-world folder contains a working folder named version-5. Create a new folder named version-6 by copying every file and folder from version-5. Make all new changes only inside version-6 and do not change the earlier folders. Make version-6 work well on smartphones while keeping the computer controls. Make the whole game fit upright and sideways phone screens without cutting off the game or showing a sideways scroll bar. Add large Left and Right buttons near the lower-left corner and a large Jump button near the lower-right corner. I need to be able to hold a direction with one finger and jump with another. Tapping the game buttons should not move the webpage, select words, or make the screen larger. Double-tapping Jump should still make Jubee jump higher. Start the music only after I tap Start so phone browsers allow it. Make every menu button easy to tap. Keep all ten levels, supplied pictures, sounds, scores, enemies, apple power, and gate actions working. Create or update all needed files directly inside version-6. When you finish, tell me how to test it on a computer and a phone.</blockquote>
+            <blockquote>My open jubee-world folder contains a working folder named version-5. Create a new folder named version-6 by copying every file and folder from version-5. Make all new changes only inside version-6 and do not change the earlier folders. Make version-6 work well on smartphones while keeping the computer controls. Make the whole game fit upright and sideways phone screens without cutting off the game or showing a sideways scroll bar. Put all touch controls in a separate panel below and completely outside the game screen. Place large Left and Right buttons on the left side of this panel and a large Jump button on the right side. The buttons must never cover Jubee, enemies, platforms, or any other part of the game. I need to be able to hold a direction with one finger and jump with another. Tapping the game buttons should not move the webpage, select words, or make the screen larger. Double-tapping Jump should still make Jubee jump higher. Start the music only after I tap Start so phone browsers allow it. Make every menu button easy to tap. Keep all ten levels, supplied pictures, sounds, scores, enemies, apple power, and gate actions working. Create or update all needed files directly inside version-6. When you finish, tell me how to test it on a computer and a phone.</blockquote>
           </div>
-          <details><summary>What should I test?</summary><ul><li>Check that Copilot created <code>version-6</code> without changing version-5.</li><li>Make the browser window narrow and try the game upright and sideways.</li><li>Hold Left or Right while tapping Jump with a second finger.</li><li>Double-tap Jump and check the high jump.</li><li>Touch every Start, Sound, Next Level, and Restart button.</li><li>Make sure the page stays still while using the game buttons.</li><li>Publish version-6 and play its GitHub Pages link on a real phone.</li></ul></details>
+          <details><summary>What should I test?</summary><ul><li>Check that Copilot created <code>version-6</code> without changing version-5.</li><li>Make the browser window narrow and try the game upright and sideways.</li><li>Confirm that all three touch buttons remain completely below the game screen.</li><li>Hold Left or Right while tapping Jump with a second finger.</li><li>Double-tap Jump and check the high jump.</li><li>Touch every Start, Sound, Next Level, and Restart button.</li><li>Make sure the page stays still while using the game buttons.</li><li>Publish version-6 and play its GitHub Pages link on a real phone.</li></ul></details>
         </div>
       </article>
     </section>
@@ -302,12 +302,11 @@
         <p>An adult should help with account creation and publishing. GitHub Pages can show this site online for free.</p>
       </div>
       <ol class="publish-steps">
-        <li><strong>Create a repository.</strong> Sign in at <a href="https://github.com/">github.com</a>, create a new public repository, and name it <code>jubee-world-learning</code>.</li>
+        <li><strong>Create a repository.</strong> Sign in at <a href="https://github.com/">github.com</a>, create a new public repository, and name it <code>jubeeworld</code>.</li>
         <li><strong>Upload the site.</strong> Unzip the downloaded package and upload everything inside it. Keep <code>index.html</code> at the top level.</li>
         <li><strong>Open Pages.</strong> Go to <strong>Settings → Pages</strong>. Choose <strong>Deploy from a branch</strong>, then choose <strong>main</strong> and <strong>/(root)</strong>.</li>
-        <li><strong>Visit the site.</strong> Wait a few minutes. The address will usually be <code>https://YOUR-USERNAME.github.io/jubee-world-learning/</code>.</li>
+        <li><strong>Visit the site.</strong> Wait a few minutes. The address will usually be <code>https://YOUR-USERNAME.github.io/jubeeworld/</code>.</li>
       </ol>
-      <aside class="browser-note"><span aria-hidden="true">🌐</span><div><strong>No Canvas school files are needed.</strong><p>The finished game uses a browser drawing screen that programmers call an HTML canvas. It is built into Chrome, Safari, Firefox, and Edge. It is not connected to Canvas LMS.</p></div></aside>
       <div class="finish-panel">
         <img src="site-assets/jubee-celebrating.png" alt="Jubee celebrating">
         <div><p class="eyebrow">See where you are headed</p><h2>Try the finished Jubee World</h2><p>Play the complete ten-level example before you begin—or compare it with the version you make.</p><a class="button primary" href="finished-game/index.html">Play the finished game</a></div>

@@ -98,8 +98,8 @@ canvas { display: block; width: 100%; height: auto; outline: none; }
 .key-guide { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin: 20px 0; font-size: .9rem; font-weight: 800; }
 kbd { display: inline-block; min-width: 30px; margin: 0 2px; padding: 5px 8px; border: 1px solid #b89c81; border-bottom-width: 3px; border-radius: 7px; background: #fff; }
 
-.touch-controls { position: absolute; left: max(14px, env(safe-area-inset-left)); right: max(14px, env(safe-area-inset-right)); bottom: max(14px, env(safe-area-inset-bottom)); display: none; justify-content: space-between; pointer-events: none; }
-.touch-controls button { width: 64px; height: 64px; border-radius: 50%; background: rgba(54, 113, 142, .9); pointer-events: auto; touch-action: none; user-select: none; -webkit-user-select: none; }
+.touch-controls { display: none; width: 100%; margin-top: 10px; padding: 9px max(12px, env(safe-area-inset-right)) 9px max(12px, env(safe-area-inset-left)); align-items: center; justify-content: space-between; background: rgba(255, 248, 233, .96); border: 3px solid #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(67, 42, 30, .16); }
+.touch-controls button { width: 64px; height: 64px; border-radius: 50%; background: rgba(54, 113, 142, .94); touch-action: none; user-select: none; -webkit-user-select: none; }
 .touch-controls .touch-pair { display: flex; gap: 10px; }
 .touch-controls .jump-button { width: 82px; height: 82px; background: rgba(235, 145, 29, .94); font-size: .8rem; }
 
@@ -115,10 +115,11 @@ kbd { display: inline-block; min-width: 30px; margin: 0 2px; padding: 5px 8px; b
 
 @media (pointer: coarse) and (orientation: landscape) {
   body { min-height: 100dvh; padding: max(4px, env(safe-area-inset-top)) max(4px, env(safe-area-inset-right)) max(4px, env(safe-area-inset-bottom)) max(4px, env(safe-area-inset-left)); place-items: center; overflow: hidden; }
-  .game-shell { width: min(100%, calc((100dvh - 8px) * 16 / 9)); }
+  .game-shell { width: min(100%, calc((100dvh - 108px) * 16 / 9)); }
   .title-row, .tip { display: none; }
   .game-frame { border-width: 3px; border-radius: 16px; }
-  .panel { max-height: 92dvh; overflow: auto; padding: 14px 18px; }
+  .touch-controls { margin-top: 6px; padding-block: 4px; border-radius: 16px; }
+  .panel { max-height: calc(100dvh - 118px); overflow: auto; padding: 14px 18px; }
   .panel p:not(.eyebrow) { margin-bottom: 8px; }
   .key-guide { margin: 10px 0; }
   .jubee-badge { display: none; }
