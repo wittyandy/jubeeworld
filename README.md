@@ -2,6 +2,8 @@
 
 This folder is ready to publish with GitHub Pages. The homepage teaches children how to create Jubee World from three empty files in five working versions. It also includes the finished ten-level game as a playable example.
 
+The homepage now begins with links and directions for installing Visual Studio Code and turning on GitHub Copilot Free. The finished example places its most useful values in an `EASY_SETTINGS` section near the top of `finished-game/game.js`, where children can safely experiment with movement speed, jump height, gravity, sound volume, apple-power time, and the wait between stages.
+
 ## Preview on your computer
 
 Double-click `index.html`. Select **Play the finished example** to open the included game.

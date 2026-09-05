@@ -14,8 +14,9 @@
     <nav class="topbar" aria-label="Main navigation">
       <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">🐾</span> Jubee World</a>
       <div class="nav-links">
-        <a href="#start">Get ready</a>
+        <a href="#start">Set up</a>
         <a href="#versions">Build the game</a>
+        <a href="#customize">Change the game</a>
         <a href="#publish">Put it online</a>
       </div>
     </nav>
@@ -44,11 +45,36 @@
   </header>
 
   <main>
-    <section class="section intro" id="start">
+    <section class="section tools" id="start">
       <div class="section-heading">
-        <p class="eyebrow">Before you start</p>
-        <h2>Make a new folder</h2>
-        <p>Use a web browser, a text editor such as Visual Studio Code, and an AI assistant. Ask an adult for help when creating an online account or putting the game online.</p>
+        <p class="eyebrow">Step 1: Get your free tools</p>
+        <h2>Set up Visual Studio Code and Copilot</h2>
+        <p>Visual Studio Code is the free program your child will use to open and change the game files. GitHub Copilot Free is the AI helper inside it.</p>
+      </div>
+      <div class="tool-downloads">
+        <a class="tool-card vscode-card" href="https://code.visualstudio.com/download" target="_blank" rel="noopener">
+          <span class="tool-icon" aria-hidden="true">&lt;/&gt;</span>
+          <span><small>Download first</small><strong>Visual Studio Code</strong><em>Free for Mac, Windows, and Linux →</em></span>
+        </a>
+        <a class="tool-card copilot-card" href="https://docs.github.com/en/copilot/how-tos/manage-your-account/get-started-with-a-copilot-plan" target="_blank" rel="noopener">
+          <span class="tool-icon" aria-hidden="true">✦</span>
+          <span><small>Then turn on</small><strong>GitHub Copilot Free</strong><em>Official setup directions →</em></span>
+        </a>
+      </div>
+      <ol class="setup-steps">
+        <li><strong>Install Visual Studio Code.</strong><span>Use the blue download card above and follow the directions for your computer.</span></li>
+        <li><strong>Open Copilot.</strong><span>In Visual Studio Code, select the Copilot picture near the top-right corner.</span></li>
+        <li><strong>Choose Copilot Free.</strong><span>Select <em>Sign up for Copilot Free</em> and sign in with a GitHub account. An adult should help with the account.</span></li>
+        <li><strong>Open your game folder.</strong><span>Select <em>File → Open Folder</em>, choose <code>jubee-world</code>, and open Copilot Chat.</span></li>
+      </ol>
+      <aside class="tip"><strong>Copilot Free has a monthly limit.</strong> It is enough to begin this project, but ask for one version at a time and keep every working version so you do not waste requests.</aside>
+    </section>
+
+    <section class="section intro" id="folder">
+      <div class="section-heading">
+        <p class="eyebrow">Step 2: Make the starting files</p>
+        <h2>Make a new folder in Visual Studio Code</h2>
+        <p>Create a folder named <code>jubee-world</code>. Open it in Visual Studio Code, then create these three empty files in the left sidebar.</p>
       </div>
 
       <div class="setup-grid">
@@ -183,6 +209,51 @@
           <details><summary>What should I test?</summary><ul><li>Play all ten levels.</li><li>Check movement, jumps, platforms, items, enemies, hearts, gates, and sounds.</li><li>Turn sound off and on.</li><li>Try the game at different window sizes.</li></ul></details>
         </div>
       </article>
+    </section>
+
+    <section class="section customize" id="customize">
+      <div class="section-heading">
+        <p class="eyebrow">Make it your own</p>
+        <h2>Change a number. Change the game.</h2>
+        <p>After the finished game works, open <code>finished-game/game.js</code>. The easy settings are together near the top. Change only one value, save the file, refresh the browser, and try it.</p>
+      </div>
+      <div class="settings-demo">
+        <div class="code-window">
+          <div class="code-window-top"><span></span><span></span><span></span><strong>game.js</strong></div>
+          <pre><code>const EASY_SETTINGS = {
+  movementSpeed: 4.15,
+  normalJumpHeight: 13.7,
+  highJumpHeight: 17.2,
+  gravity: 0.72,
+  soundVolume: 1,
+  applePowerSeconds: 5,
+  nextStageDelaySeconds: 2.2
+};</code></pre>
+        </div>
+        <div class="setting-cards">
+          <div><span aria-hidden="true">🏃</span><p><strong>Movement speed</strong>Try <code>3</code> for slower or <code>5</code> for faster.</p></div>
+          <div><span aria-hidden="true">⬆️</span><p><strong>Jump height</strong>A larger number makes Jubee jump higher.</p></div>
+          <div><span aria-hidden="true">🔊</span><p><strong>Sound volume</strong>Try <code>0.5</code> for quieter or <code>0</code> for silent.</p></div>
+          <div><span aria-hidden="true">🍎</span><p><strong>Apple power</strong>Change <code>5</code> to choose how many seconds it lasts.</p></div>
+        </div>
+      </div>
+
+      <div class="change-grid">
+        <article>
+          <img src="site-assets/jubee-jumping.png" alt="Jubee jumping">
+          <div><h3>Ask Copilot to make easy settings</h3><p>If your own game does not have the settings box, copy this prompt into Copilot Chat.</p></div>
+          <div class="prompt-box light">
+            <div class="prompt-top"><strong>Prompt to give Copilot</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>Please put the easy-to-change game settings together near the top of game.js. Include movement speed, normal jump height, high jump height, gravity, sound volume, apple power time, and next-level wait time. Give each setting a clear name and a short note with a safe value to try. Update the rest of the game to use these settings. Keep everything else working.</blockquote>
+          </div>
+        </article>
+        <article>
+          <img src="site-assets/golden-bone.png" alt="Golden bone">
+          <div><h3>Change levels and backgrounds</h3><p>Near the top of <code>game.js</code>, each level has a theme named <code>meadow</code>, <code>autumn</code>, or <code>moonlit</code>. Change the word to use different scenery.</p><p>You can also replace the pictures in <code>assets/backgrounds</code>. Keep the same file names so the game can find them.</p></div>
+        </article>
+      </div>
+
+      <aside class="safe-change"><strong>The one-change rule</strong><span>Change one number or picture, save, refresh, and test. If you like it, keep it. If not, undo the change. This is how game designers experiment safely.</span></aside>
     </section>
 
     <section class="section help" id="help">
