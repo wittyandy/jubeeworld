@@ -4,7 +4,7 @@ This folder is ready to publish with GitHub Pages. The homepage teaches children
 
 Game assets: https://github.com/wittyandy/jubeeworld/tree/main/finished-game/assets
 
-The included finished game places its smartphone movement and Jump controls in a separate panel below the game screen, rather than over the game.
+In smartphone landscape mode, the included finished game uses the available screen height, with movement controls outside the game at the far left and Jump outside it at the far right.
 
 The homepage now begins with links and directions for installing Visual Studio Code and turning on GitHub Copilot Free. The finished example places its most useful values in an `EASY_SETTINGS` section near the top of `finished-game/game.js`, where children can safely experiment with movement speed, jump height, gravity, sound volume, apple-power time, and the wait between stages.
 

@@ -17,7 +17,15 @@
       <button id="soundButton" class="icon-button" type="button" aria-label="Turn sound off">Sound: On</button>
     </header>
 
-    <section class="game-frame" aria-label="Jubee World game">
+    <div class="play-layout">
+      <div class="touch-controls move-controls" aria-label="Movement controls">
+        <div class="touch-pair">
+          <button id="leftButton" type="button" aria-label="Move left">◀</button>
+          <button id="rightButton" type="button" aria-label="Move right">▶</button>
+        </div>
+      </div>
+
+      <section class="game-frame" aria-label="Jubee World game">
       <canvas id="game" width="960" height="540" tabindex="0" aria-label="Ten-stage side-scrolling platform game. Use arrow keys to move and Space to jump."></canvas>
 
       <div id="startPanel" class="overlay">
@@ -45,14 +53,11 @@
         </div>
       </div>
 
-    </section>
+      </section>
 
-    <div class="touch-controls" aria-label="Touch controls">
-      <div class="touch-pair">
-        <button id="leftButton" type="button" aria-label="Move left">◀</button>
-        <button id="rightButton" type="button" aria-label="Move right">▶</button>
+      <div class="touch-controls jump-controls" aria-label="Jump control">
+        <button id="jumpButton" class="jump-button" type="button" aria-label="Jump">JUMP</button>
       </div>
-      <button id="jumpButton" class="jump-button" type="button" aria-label="Jump">JUMP</button>
     </div>
 
     <p class="tip"><strong>Goal:</strong> touch the finish gate beside Jubee's doghouse to complete each stage. Bones earn points, and an apple makes Jubee bigger for five seconds. Double-tap <strong>Up</strong> or the touch <strong>Jump</strong> button for a high jump.</p>

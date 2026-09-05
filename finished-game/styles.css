@@ -28,6 +28,7 @@ body {
 button { font: inherit; }
 
 .game-shell { width: min(100%, 1040px); }
+.play-layout { display: block; }
 
 .title-row {
   display: flex;
@@ -98,28 +99,38 @@ canvas { display: block; width: 100%; height: auto; outline: none; }
 .key-guide { display: flex; justify-content: center; flex-wrap: wrap; gap: 18px; margin: 20px 0; font-size: .9rem; font-weight: 800; }
 kbd { display: inline-block; min-width: 30px; margin: 0 2px; padding: 5px 8px; border: 1px solid #b89c81; border-bottom-width: 3px; border-radius: 7px; background: #fff; }
 
-.touch-controls { display: none; width: 100%; margin-top: 10px; padding: 9px max(12px, env(safe-area-inset-right)) 9px max(12px, env(safe-area-inset-left)); align-items: center; justify-content: space-between; background: rgba(255, 248, 233, .96); border: 3px solid #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(67, 42, 30, .16); }
+.touch-controls { display: none; align-items: center; background: rgba(255, 248, 233, .96); border: 3px solid #fff; border-radius: 20px; box-shadow: 0 8px 20px rgba(67, 42, 30, .16); }
 .touch-controls button { width: 64px; height: 64px; border-radius: 50%; background: rgba(54, 113, 142, .94); touch-action: none; user-select: none; -webkit-user-select: none; }
 .touch-controls .touch-pair { display: flex; gap: 10px; }
 .touch-controls .jump-button { width: 82px; height: 82px; background: rgba(235, 145, 29, .94); font-size: .8rem; }
+.move-controls { justify-content: flex-start; }
+.jump-controls { justify-content: flex-end; }
 
 .tip { margin: 14px 8px 0; text-align: center; line-height: 1.45; }
 
 @media (pointer: coarse), (max-width: 720px) {
   body { padding: max(10px, env(safe-area-inset-top)) max(10px, env(safe-area-inset-right)) max(10px, env(safe-area-inset-bottom)) max(10px, env(safe-area-inset-left)); align-items: start; }
   .title-row { align-items: center; }
-  .touch-controls { display: flex; }
+  .play-layout { display: grid; grid-template-columns: 1fr 1fr; grid-template-areas: "game game" "move jump"; gap: 10px; }
+  .game-frame { grid-area: game; }
+  .move-controls { grid-area: move; }
+  .jump-controls { grid-area: jump; }
+  .touch-controls { display: flex; min-height: 88px; padding: 8px 10px; }
   .tip { font-size: .9rem; }
   .panel { padding: 22px 18px; }
 }
 
 @media (pointer: coarse) and (orientation: landscape) {
   body { min-height: 100dvh; padding: max(4px, env(safe-area-inset-top)) max(4px, env(safe-area-inset-right)) max(4px, env(safe-area-inset-bottom)) max(4px, env(safe-area-inset-left)); place-items: center; overflow: hidden; }
-  .game-shell { width: min(100%, calc((100dvh - 108px) * 16 / 9)); }
+  .game-shell { width: 100%; height: calc(100dvh - 8px); }
   .title-row, .tip { display: none; }
-  .game-frame { border-width: 3px; border-radius: 16px; }
-  .touch-controls { margin-top: 6px; padding-block: 4px; border-radius: 16px; }
-  .panel { max-height: calc(100dvh - 118px); overflow: auto; padding: 14px 18px; }
+  .play-layout { width: 100%; height: 100%; grid-template-columns: 94px minmax(0, 1fr) 64px; grid-template-areas: "move game jump"; align-items: center; gap: 2px; }
+  .game-frame { width: 100%; max-width: calc((100dvh - 8px) * 16 / 9); justify-self: center; border-width: 3px; border-radius: 16px; }
+  .touch-controls { height: 100%; min-height: 0; padding: 0; background: transparent; border: 0; border-radius: 0; box-shadow: none; }
+  .touch-controls .touch-pair { gap: 4px; }
+  .touch-controls button { width: 44px; height: 64px; }
+  .touch-controls .jump-button { width: 60px; height: 78px; }
+  .panel { max-height: calc(100dvh - 14px); overflow: auto; padding: 14px 18px; }
   .panel p:not(.eyebrow) { margin-bottom: 8px; }
   .key-guide { margin: 10px 0; }
   .jubee-badge { display: none; }
