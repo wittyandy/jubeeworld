@@ -1,0 +1,220 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Build Jubee World from scratch in five friendly versions with help from AI.">
+  <title>Make Jubee World</title>
+  <link rel="stylesheet" href="site.css">
+</head>
+<body>
+  <a class="skip-link" href="#versions">Skip to the five versions</a>
+
+  <header class="hero">
+    <nav class="topbar" aria-label="Main navigation">
+      <a class="brand" href="#top"><span class="brand-mark" aria-hidden="true">🐾</span> Jubee World</a>
+      <div class="nav-links">
+        <a href="#start">Get ready</a>
+        <a href="#versions">Build the game</a>
+        <a href="#publish">Put it online</a>
+      </div>
+    </nav>
+
+    <div class="hero-content" id="top">
+      <div>
+        <p class="eyebrow">A make-it-yourself game adventure</p>
+        <h1>Build Jubee World<br>with help from AI</h1>
+        <p class="hero-copy">Begin with three empty files. Make one working version at a time. By Version 5, Jubee will run, jump, collect bones, defeat enemies, and travel through ten levels.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#start">Start making the game</a>
+          <a class="button secondary" href="finished-game/index.html">Play the finished example</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-label="Jubee, the game character">
+        <div class="sun"></div>
+        <div class="cloud cloud-one" aria-hidden="true"></div>
+        <div class="cloud cloud-two" aria-hidden="true"></div>
+        <img class="floating-item floating-bone" src="site-assets/golden-bone.png" alt="">
+        <img class="floating-item floating-apple" src="site-assets/apple.png" alt="">
+        <img src="site-assets/jubee-standing.png" alt="Jubee, a cheerful caramel and cream puppy">
+        <div class="hill hill-back"></div>
+        <div class="hill hill-front"></div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section intro" id="start">
+      <div class="section-heading">
+        <p class="eyebrow">Before you start</p>
+        <h2>Make a new folder</h2>
+        <p>Use a web browser, a text editor such as Visual Studio Code, and an AI assistant. Ask an adult for help when creating an online account or putting the game online.</p>
+      </div>
+
+      <div class="setup-grid">
+        <div class="folder-card">
+          <h3>Your starting folder</h3>
+          <pre aria-label="Starting folder and files">jubee-world/
+  index.html
+  styles.css
+  game.js</pre>
+        </div>
+        <div class="file-jobs">
+          <div><span>1</span><p><strong>index.html</strong> holds the words, buttons, and game area.</p></div>
+          <div><span>2</span><p><strong>styles.css</strong> controls colors, spacing, and appearance.</p></div>
+          <div><span>3</span><p><strong>game.js</strong> controls movement, scores, enemies, and levels.</p></div>
+        </div>
+      </div>
+
+      <aside class="tip">
+        <strong>Save every working version.</strong> Copy the whole folder after each version and name it <code>jubee-world-version-1</code>, then 2, 3, 4, and 5. If something breaks, return to the last version that worked.
+      </aside>
+    </section>
+
+    <section class="section asking">
+      <div class="section-heading compact">
+        <p class="eyebrow">Talking with AI</p>
+        <h2>Explain your idea naturally</h2>
+        <p>Tell AI what you are making, what you want to change, which files you are sharing, and what should happen when it works. Short, clear sentences are best.</p>
+      </div>
+      <ol class="work-cycle">
+        <li><span>Ask</span>Copy the prompt and share your current files.</li>
+        <li><span>Build</span>Put the returned code in the correctly named file.</li>
+        <li><span>Try</span>Open or refresh the game and test the new change.</li>
+        <li><span>Save</span>Keep a new version only after everything works.</li>
+      </ol>
+    </section>
+
+    <section class="section versions" id="versions">
+      <div class="section-heading">
+        <p class="eyebrow">Your five-version journey</p>
+        <h2>Build one useful part at a time</h2>
+        <p>Open each version, copy its prompt, and share the files requested. Check the “Finished” box when your version passes every test.</p>
+      </div>
+
+      <div class="adventure-progress" aria-label="Learning progress">
+        <div class="progress-copy"><span id="progress-count">0 of 5 versions finished</span><strong id="progress-cheer">Your adventure starts here!</strong></div>
+        <div class="progress-track" aria-hidden="true"><span id="progress-fill"></span></div>
+        <div class="progress-paws" aria-hidden="true"><span>🐾</span><span>🐾</span><span>🐾</span><span>🐾</span><span>🏠</span></div>
+      </div>
+
+      <article class="version-card version-one" id="version-1">
+        <div class="version-side"><span>Version</span><strong>1</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">The beginning</p><h3>Make the page and move Jubee</h3></div>
+            <img class="version-picture" src="site-assets/jubee-standing.png" alt="Jubee standing">
+            <label class="done"><input type="checkbox" data-version="1"> Finished</label>
+          </div>
+          <ul class="changes"><li>Cheerful game page</li><li>Start button</li><li>Temporary Jubee</li><li>Left and right movement</li></ul>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>I want to make a browser game called Jubee World. I have three empty files named index.html, styles.css, and game.js. Please make a cheerful page with the game title, a large game area, simple instructions, and a Start Game button. Draw Jubee as a caramel-colored shape with a cream-colored face. Let me move Jubee left and right with the arrow keys or the A and D keys. Jubee should stop when I release a key and should stay inside the game area. Give me the complete code for all three files and clearly label each file.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Open index.html and select Start Game.</li><li>Hold and release each movement key.</li><li>Make sure Jubee stays inside the game area.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="version-card version-two" id="version-2">
+        <div class="version-side"><span>Version</span><strong>2</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">Explore</p><h3>Add jumping, a world, and a finish gate</h3></div>
+            <img class="version-picture" src="site-assets/jubee-jumping.png" alt="Jubee jumping">
+            <label class="done"><input type="checkbox" data-version="2"> Finished</label>
+          </div>
+          <ul class="changes"><li>Normal and high jumps</li><li>Platforms and gaps</li><li>A wider world</li><li>Finish gate</li></ul>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>Please improve my current Jubee World game. Add ground, raised platforms, and a few gaps. Jubee should jump with Space, W, or Up Arrow. If I press Up Arrow twice quickly, Jubee should jump higher. Jubee should land on platforms and should not jump again while already in the air. Make the world wider than the screen so the view follows Jubee as she moves. Put a wooden finish gate at the end. The level should finish only when Jubee touches the gate. Keep the movement from Version 1 calm and smooth. Give me the complete updated files that need to change.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Try every jump key and the double Up Arrow jump.</li><li>Land on every platform and cross every gap.</li><li>Make sure the level ends only when Jubee touches the gate.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="version-card version-three" id="version-3">
+        <div class="version-side"><span>Version</span><strong>3</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">Challenges</p><h3>Add bones, an apple, and enemies</h3></div>
+            <div class="version-picture-group" aria-label="A golden bone and an apple"><img src="site-assets/golden-bone.png" alt="Golden bone"><img src="site-assets/apple.png" alt="Apple"></div>
+            <label class="done"><input type="checkbox" data-version="3"> Finished</label>
+          </div>
+          <ul class="changes"><li>Golden bones and points</li><li>Five-second apple power</li><li>Three enemy types</li><li>Hearts and restart</li></ul>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>Please add fun challenges to my current Jubee World game. Place golden bones around the level and add points when Jubee collects them. Add an apple that makes Jubee larger for exactly five seconds, then returns her to normal size. Add squirrels, raccoons, and make-believe poison-ivy creatures. Jubee should defeat an enemy when she lands on it while falling. Touching an enemy from the side should take away one heart. Give Jubee three hearts and add a Restart button. Keep the jumps and finish gate working. Give me the complete updated files that need to change.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Collect bones and watch the score.</li><li>Eat the apple and count five seconds.</li><li>Defeat every enemy from above and test side contact.</li><li>Lose all hearts, restart, and reach the gate.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="version-card version-four" id="version-4">
+        <div class="version-side"><span>Version</span><strong>4</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">Bring it to life</p><h3>Add pictures, smooth movement, and ten levels</h3></div>
+            <img class="version-picture" src="site-assets/raccoon.png" alt="Raccoon game character">
+            <label class="done"><input type="checkbox" data-version="4"> Finished</label>
+          </div>
+          <ul class="changes"><li>Character and item pictures</li><li>Calm animation</li><li>Ten harder levels</li><li>Final celebration</li></ul>
+          <div class="asset-note"><strong>Before asking:</strong> Put your pictures in an <code>assets</code> folder. Make smaller folders named <code>jubee</code>, <code>squirrel</code>, <code>raccoon</code>, <code>ivy</code>, <code>bone</code>, <code>apple</code>, and <code>backgrounds</code>.</div>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>Please use my pictures in Jubee World. Replace the temporary shapes with the Jubee, squirrel, raccoon, poison-ivy, bone, and apple pictures I attached. Show the pictures in order so the actions look smooth. Use only two calm walking pictures for moving left and right, and do not make Jubee bounce up and down while running. Keep her size easy to see. Add ten levels. Each new level can be a little longer and can have more platforms, bones, and enemies, but every jump must still be possible. After Jubee touches the gate, show a Next Level button. After Level 10, show a celebration screen. Give me the complete updated files that need to change, and list the picture folders and names the game expects.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Watch Jubee stand, run, jump, and land.</li><li>Make sure running is calm and every picture appears.</li><li>Test the changes between several levels.</li><li>Finish Level 10 and check the celebration.</li></ul></details>
+        </div>
+      </article>
+
+      <article class="version-card version-five" id="version-5">
+        <div class="version-side"><span>Version</span><strong>5</strong></div>
+        <div class="version-main">
+          <div class="version-title">
+            <div><p class="tag">Finish and share</p><h3>Add scenery, music, sounds, and final polish</h3></div>
+            <img class="version-picture" src="site-assets/jubee-celebrating.png" alt="Jubee celebrating">
+            <label class="done"><input type="checkbox" data-version="5"> Finished</label>
+          </div>
+          <ul class="changes"><li>Continuous scenery</li><li>Music and action sounds</li><li>Phone and tablet buttons</li><li>Final testing</li></ul>
+          <div class="prompt-box">
+            <div class="prompt-top"><strong>Prompt to give AI</strong><button class="copy-button" type="button">Copy prompt</button></div>
+            <blockquote>Please finish and polish my current Jubee World game. Add wide background pictures that move gently with the world and do not show obvious repeated edges. Use sunny, autumn, and nighttime scenery in different levels. Add cheerful background music and clear sounds for a normal jump, high jump, collecting a bone, eating an apple, growing larger, returning to normal size, defeating an enemy, getting hurt, and finishing a level. Add a Sound On or Off button. Add simple screen buttons so the game can be played on a phone or tablet. Keep all ten levels, calm movement, the five-second apple power, and the finish gate working. Give me the complete updated files that need to change.</blockquote>
+          </div>
+          <details><summary>What should I test?</summary><ul><li>Play all ten levels.</li><li>Check movement, jumps, platforms, items, enemies, hearts, gates, and sounds.</li><li>Turn sound off and on.</li><li>Try the game at different window sizes.</li></ul></details>
+        </div>
+      </article>
+    </section>
+
+    <section class="section help" id="help">
+      <div class="section-heading compact"><p class="eyebrow">When something breaks</p><h2>Tell AI exactly what happened</h2></div>
+      <div class="prompt-box light">
+        <div class="prompt-top"><strong>Problem-solving prompt</strong><button class="copy-button" type="button">Copy prompt</button></div>
+        <blockquote>I am making Jubee World. When I [say what you did], the game [say what happened]. I expected [say what should happen]. Here are my current files. Please find the cause, keep all working features, and give me the complete corrected file that I should replace. Also give me three quick things to test.</blockquote>
+      </div>
+    </section>
+
+    <section class="section publish" id="publish">
+      <div class="section-heading">
+        <p class="eyebrow">Share the learning page</p>
+        <h2>Put this website on GitHub Pages</h2>
+        <p>An adult should help with account creation and publishing. GitHub Pages can show this site online for free.</p>
+      </div>
+      <ol class="publish-steps">
+        <li><strong>Create a repository.</strong> Sign in at <a href="https://github.com/">github.com</a>, create a new public repository, and name it <code>jubee-world-learning</code>.</li>
+        <li><strong>Upload the site.</strong> Unzip the downloaded package and upload everything inside it. Keep <code>index.html</code> at the top level.</li>
+        <li><strong>Open Pages.</strong> Go to <strong>Settings → Pages</strong>. Choose <strong>Deploy from a branch</strong>, then choose <strong>main</strong> and <strong>/(root)</strong>.</li>
+        <li><strong>Visit the site.</strong> Wait a few minutes. The address will usually be <code>https://YOUR-USERNAME.github.io/jubee-world-learning/</code>.</li>
+      </ol>
+      <aside class="browser-note"><span aria-hidden="true">🌐</span><div><strong>No Canvas school files are needed.</strong><p>The finished game uses a browser drawing screen that programmers call an HTML canvas. It is built into Chrome, Safari, Firefox, and Edge. It is not connected to Canvas LMS.</p></div></aside>
+      <div class="finish-panel">
+        <img src="site-assets/jubee-celebrating.png" alt="Jubee celebrating">
+        <div><p class="eyebrow">See where you are headed</p><h2>Try the finished Jubee World</h2><p>Play the complete ten-level example before you begin—or compare it with the version you make.</p><a class="button primary" href="finished-game/index.html">Play the finished game</a></div>
+      </div>
+    </section>
+  </main>
+
+  <footer><p>Made for learning, experimenting, and creating together.</p><a href="#top">Back to top ↑</a></footer>
+  <div class="copy-message" role="status" aria-live="polite"></div>
+  <script src="site.js"></script>
+</body>
+</html>
